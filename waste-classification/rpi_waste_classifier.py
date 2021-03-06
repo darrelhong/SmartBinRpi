@@ -1,6 +1,7 @@
 from gpiozero import Button, LED, PWMLED
 from picamera import PiCamera
 from time import sleep
+import argparse
 
 from lobe import ImageModel
 
@@ -13,8 +14,12 @@ white_led = PWMLED(24) #Status light and retake photo
 
 camera = PiCamera()
 
+parser = argparse.ArgumentParser(description='Waste classifier')
+parser.add_argument('--model', help='Path to model folder', type=str, default='model')
+args = parser.parse_args()
+
 # Load Lobe TF model
-model = ImageModel.load('model')
+model = ImageModel.load(args.model)
 
 # Take Photo
 def take_photo():
