@@ -54,6 +54,9 @@ def led_select(label):
         print("recyclable")
         blue_led.on()
         sleep(5)
+    if label == "noitem":
+        print("No item detected!")
+        sleep(5)
     else:
         print("None")
         blue_led.off()

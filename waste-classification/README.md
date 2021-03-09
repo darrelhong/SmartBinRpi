@@ -7,7 +7,7 @@
 
 Setup above equipment according to pin layout in `rpi_waste_classifier.py`
 
-Download model from https://nusu-my.sharepoint.com/:u:/r/personal/e0311162_u_nus_edu/Documents/trash-dataset%20TFLite.zip?csf=1&web=1
+Download model from https://nusu-my.sharepoint.com/:u:/r/personal/e0311162_u_nus_edu/Documents/classification%20model/trash-dataset-v3%20TFLite.zip?csf=1&web=1
 
 Unzip and rename folder to `model` and place in the same directory as `rpi_waste_classifier.py`
 
@@ -15,7 +15,7 @@ Run program with python3
 
 Current drawbacks
 
-- There is no label for "no item" so when no item is presented, it will return `recyclable`. Possible reason explained below.
+- Label for `no item` added, works sometimes
 
 
 ## Dataset used
